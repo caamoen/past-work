@@ -31,7 +31,7 @@
 		SCHEDSQUATCH_LAYOUT = "V"
 	End If
 
-	If Request.Cookies("STPLUS_ENABLED") <> "" Then
+	If Request.Cookies("STPLUS_ENABLED") <> "" Then 
 		STPLUS_ENABLED = Request.Cookies("STPLUS_ENABLED")
 	Else
 		STPLUS_ENABLED = "N"
