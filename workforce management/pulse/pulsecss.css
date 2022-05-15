@@ -1,0 +1,362 @@
+	ul.chosen-choices {
+		max-height: 40px;
+		overflow: auto !important;
+	}
+	select::-ms-expand {
+		display: none;
+	}
+	input[type=text]:focus, select:focus {
+		outline: none; 
+	}
+	input[type=text] {
+		width: 100%;
+		border: none;
+		background-color: transparent;
+	}
+	input:invalid {
+		background-color: #f9e0e9;
+		border-radius: .3em;
+		box-shadow: 0px 0px 8px rgba(200,0,0,0.9);
+	}
+	button:hover, input[type=submit]:hover, select:hover, a:hover {
+		opacity: .85;
+	}
+	select {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		border: none;
+		cursor: pointer;
+		background-color: transparent;
+	}
+	caption {
+		caption-side: top;
+		font-weight: bold;
+		padding: .25rem;
+		margin: 0 1px;
+	}
+	#main-wrap{
+		display: flex;
+		flex-wrap: wrap;
+		height: 93vh;
+	}
+	.mobile-hide{
+		display: none;
+	}
+	body{
+		font-size: .75rem;
+	}
+	.btn{
+		font-size: .75rem;
+	}
+	@media (min-width: 768px){
+		.mobile-hide{
+			display: table-cell;
+		}
+		body{
+			font-size: 1rem;
+		}
+		.btn{
+			font-size: 1rem;
+		}
+	}
+	.dashboarddiv-short{
+		width: 100%;
+	}
+	@media (min-width: 1200px){
+		.dashboarddiv-short {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+			height: 50%;
+		}
+		#dashboarddiv-wide{
+			height: 50%;		
+		}
+		#schedule-stats-div{
+			height: 50%;
+		}
+		#current-day-div{
+			height: 50%;
+			overflow-y: auto;
+		}
+	}
+	#dashboarddiv-wide{
+		display: flex;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		flex-wrap: wrap;
+		width: 100%;
+		padding: 8px 0;
+	}
+	#dashboard-left{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 8px 8px 8px 0;	
+	}
+	#dashboard-right{
+		padding: 8px 0 8px 8px;	
+	}
+	#schedule-stats-div{
+		width: 100%;
+	}
+	#current-day-div{
+		width: 100%;
+	}
+	.today-color-background{
+		background-color: #395a93 !important;
+	}
+	.past-color-background{
+		background-color: #a70117 !important;
+	}	
+	.today-color{
+		color: #395a93 !important;
+	}
+	.past-color{
+		color: #a70117 !important;
+	}
+	.today-color-border{
+		border:1px solid #395a93 !important;
+	}
+	.past-color-border{
+		border:1px solid #a70117 !important;
+	}
+	.altdate-entry-color{
+		background-color: #eee;
+	}
+	.new-entry-color{
+		background-color: #cfc !important;
+	}
+	.new-entry-color-error{
+		background-color: inherit !important;
+	}	
+	.error-color{
+		color: #c90c35 !important;
+	}
+	.error-color-background{
+		background-color: #f9e0e9 !important;
+	}	
+	.altdate-entry-color.error-color-background{
+		background-color: #f9b4cd !important;
+	}	
+	.error-shadow{
+		box-shadow: 0px 0px 8px rgba(200,0,0,0.9) !important;
+	}	
+	.no-border-input {
+		border: 0;
+		box-shadow: none;
+		background: transparent;
+	}
+	.dropdown-toggle {
+		white-space: nowrap;
+	}
+	.table td, .table th {
+		vertical-align: inherit !important;
+	}
+	.center {
+		text-align: center;
+	}
+	.nowrap {
+		white-space: nowrap;
+	}
+	.th-color {
+		color: #fff;
+		white-space: nowrap;
+	}
+	.livediv{
+		width: 100%;
+		overflow-y: auto;
+		font-size: .6rem;
+		height: 50%;
+	}
+	.livediv + .livediv {
+		margin-top: 20px;
+	}
+	@media (min-width: 768px){
+		.livediv {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+			height: 100%;
+			font-size: .75rem;
+		}
+		.livediv + .livediv {
+			margin-top: 0;
+		}
+	}
+	.livetable{
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 0 1px;
+		white-space: nowrap;
+	}
+	.livetable + .livetable{
+		margin-top: 10px;
+	}
+	.cddiv{
+		font-size: .6rem;
+	}
+	@media (min-width: 768px){
+		.cddiv{
+			font-size: .75rem;
+		}
+	}
+	.cdtable{
+		width: 100%;
+	}	
+	.staffdiv{
+		width: 100%;
+		overflow-y: auto;
+		font-size: 1.25rem;
+	}
+	.staffdiv + .staffdiv {
+		margin-top: 20px;
+	}
+	@media (min-width: 1200px){
+		.staffdiv {
+			-ms-flex: 0 0 50%;
+			flex: 0 0 50%;
+			max-width: 50%;
+			height: 100%;
+		}
+		.staffdiv + .staffdiv {
+			margin-top: 0;
+		}
+	}
+	.stafftable{
+		width: 75%;
+		white-space: nowrap;
+		margin: auto;
+	}
+	.circle-stat-container{
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+	@media (min-width: 1200px){
+		.circle-stat-container {
+			-ms-flex: 0 0 25%;
+			flex: 0 0 25%;
+			max-width: 25%;
+		}
+	}
+	.circle-stat{
+		max-width: 175px;
+		height: 175px;
+	}
+	.edit-div{
+		display: none;
+		border: 1px solid;
+		border-radius: .3em;
+		margin-top: 15px;
+		overflow-x: auto;
+	}
+	.subtable {
+		width:auto !important;
+		margin: 0 auto 20px !important;
+		font-size: .6rem;
+		min-width: 50%;
+	}
+	@media (min-width: 768px){
+		.subtable {
+			font-size: .7rem;
+		}
+	}
+	.subtable-td {
+		border: 0 !important;
+		padding: 0 !important;
+	}
+	.subtable-td-no-padded{
+		padding: 0 !important;
+	}
+	.subtable-td-padded-sm{
+		padding: 2px !important;
+		border: 0 !important;
+	}
+	.td-padded-sm{
+		padding: 0 2px !important;
+	}
+	.subtable-td-padded-lg{
+		padding: 5px 2px !important;
+		border: 0 !important;
+	}
+	.td-padded-lg{
+		padding: 5px 2px !important;
+	}
+	.icon-style {
+		font-size: 1.5rem;
+		cursor: pointer;
+	}
+	.icon-style-small {
+		font-size: 1rem;
+		cursor: pointer;
+	}
+	.icon-style-large {
+		font-size: 2rem;
+		cursor: pointer;
+	}
+	.icon-style + .icon-style, .icon-style-small + .icon-style-small, .icon-style-large + .icon-style-large {
+		margin-left: 25px;
+	}
+	.icon-style:hover, .icon-style-small:hover, .icon-style-large:hover {
+		opacity: .85;
+	}
+	.PEND{
+		background-color: #f0f0f0;
+	}
+	.PHONE{
+		background-color: #1b94d1;
+	}
+	.LUNCH{
+		background-color: #aeedef;
+	}
+	.TRAIN{
+		background-color: #b2b2b2;
+	}
+	.VACA{
+		background-color: #ab29b2;
+	}
+	.SRED{
+		background-color:#e5b219;
+	}
+	.GREEN{
+		background-color: #00ff00;
+	}
+	.YELLOW{
+		background-color: #ffff00;
+	}
+	.CONTROL{
+		background-color: #9f00d9 !important;
+	}
+	.white{
+		color: #fff;
+	}
+	.white-background{
+		background-color: #fff !important;
+	}
+	.transparent{
+		background-color: transparent !important;
+	}
+	.custom-handle{
+		width: 2em !important;
+		height: 1.6em !important;
+		top: 50% !important;
+		margin-top: -.8em !important;
+		text-align: center !important;
+		line-height: 1.6em !important;
+		font-weight: 600 !important;
+	}
+	#NOTES_TABLE th {
+		cursor: pointer;
+	}
+	.searchAgent {
+		cursor: pointer;
+	}
+	.searchNotes {
+		cursor: pointer;
+	}
+	.admingroup {
+		display: none;
+	}
+	.adminfields {
+		font-size: .75em;
+	}
