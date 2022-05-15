@@ -1,0 +1,405 @@
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+input[type="checkbox"]{
+	padding: 0;
+}
+
+#SCHEDSQUATCH_LEGEND {
+	font-family: Calibri;
+	font-size: 16px;
+	border: 1px solid #353535;
+	border-radius: 25px;
+	background-color: #F7F7F7;
+	text-align: center;
+	vertical-align: top;
+	width: 580px;
+	margin-bottom: 10px;
+	padding: 5px;
+	position: relative;
+}
+#SCHEDSQUATCH {
+	font-family: Calibri;
+	font-size: 12px;
+	margin-bottom: 25px;
+	border: 1px solid #353535;
+	border-radius: 5px;
+	border-collapse: separate;
+	background-color: #F7F7F7;
+	vertical-align: top;
+	width: 580px;
+	overflow: hidden;
+}
+.tab {
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	height: 30px;
+	margin-left: 1px;
+	padding: 4px 2px;
+	border: 1px solid #353535;
+	border-bottom: 0;
+	border-radius: 0.6em 0.6em 0 0;
+	background-color: #00284E;
+	color: #F7F7F7;
+	font-family: Calibri;
+	font-size: 16px;
+	font-weight: 900;
+}
+.tabselected {
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	height: 27px;
+	margin-left: 1px;
+	padding: 4px 2px;
+	border: 1px solid #353535;
+	border-bottom: 0;
+	border-radius: 0.6em 0.6em 0 0;
+	background-color: #F7F7F7;
+	color: #00284E;
+	font-family: Calibri;
+	font-size: 16px;
+	font-weight: 900;
+	position: relative;
+	top: 4px;
+}	
+.classicScheduleTd {
+	border: 1px solid #353535;
+	border-radius: 0.6em;
+	height: 50px;
+	width: 70px;
+}
+.scheduleHeading{
+	border: 1px solid #353535;
+	border-radius: 0.6em;
+	background-color: #00284E;
+	color: #FEFEFE;
+	font-weight: 900;	
+	padding: 3px;
+	font-family: Calibri !important;
+	font-size: 12px !important;
+}
+.TRAIN {
+	background-color: #b2b2b2;
+}
+.VACA {
+	background-color: #ab29b2;
+}
+.SRED {
+	background-color:#e5b219;
+}
+.ADCLOSED.STCLOSED.SPCLOSED.PKCLOSED:not(.AD):not(.ST):not(.SP):not(.PK) {
+	opacity: 0.5;
+}
+.ADCLOSED.STCLOSED.SPCLOSED.PKCLOSED.ADPHONE:not(.AD):not(.ST):not(.SP):not(.PK) {
+	background-color: #1b94d1;
+}	
+.ADCLOSED.STCLOSED.SPCLOSED.PKCLOSED.ADLUNCH:not(.AD):not(.ST):not(.SP):not(.PK) {
+	background-color: #aeedef;
+}		
+
+.AD.ADCLOSED, .ST.STCLOSED, .SP.SPCLOSED, .PK.PKCLOSED {
+	opacity: 0.5;
+}
+.AD.ADPHONE:not(.STCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #1b94d1;
+}
+.ST.ADCHECK.ADPHONE, .SP.ADCHECK.ADPHONE, .PK.ADCHECK.ADPHONE {
+	opacity: 0.5;
+	background-color: #1b94d1;
+}
+.AD.ADLUNCH:not(.STCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #aeedef;
+}	
+.ST.ADCHECK.ADLUNCH, .SP.ADCHECK.ADLUNCH, .PK.ADCHECK.ADLUNCH {
+	opacity: 0.5;
+	background-color: #aeedef;
+}
+.AD.ADSRED:not(.STCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #e5b219;
+	color: #FFFFFF;
+}
+.ST.ADCHECK.ADSRED, .SP.ADCHECK.ADSRED, .PK.ADCHECK.ADSRED {
+	opacity: 0.5;
+	background-color: #e5b219;
+	color: #FFFFFF;
+}
+.AD.ADOFF:not(.STCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #FFFFFF;
+}	
+.AD.ADADD:not(.STCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #ff7f7f;
+}
+input.AD.ADOFF:not(.STCHECK):not(.SPCHECK):not(.PKCHECK), input.ST.ADCHECK.ADOFF, input.SP.ADCHECK.ADOFF, input.PK.ADCHECK.ADOFF{
+	display: inline;
+}
+input.ST.ADOFF:not(.ADCHECK), input.SP.ADOFF:not(.ADCHECK), input.PK.ADOFF:not(.ADCHECK), input.AD.STCHECK.ADOFF, input.AD.SPCHECK.ADOFF, input.AD.PKCHECK.ADOFF {
+	display: none;
+}
+input.AD.ADLUNCH:not(.STCHECK):not(.SPCHECK):not(.PKCHECK), input.ST.ADCHECK.ADLUNCH, input.SP.ADCHECK.ADLUNCH, input.PK.ADCHECK.ADLUNCH{
+	display: inline;
+}
+input.ST.ADLUNCH:not(.ADCHECK), input.SP.ADLUNCH:not(.ADCHECK), input.PK.ADLUNCH:not(.ADCHECK), input.AD.STCHECK.ADLUNCH, input.AD.SPCHECK.ADLUNCH, input.AD.PKCHECK.ADLUNCH {
+	display: none;
+}
+input.AD.ADADD:not(.STCHECK):not(.SPCHECK):not(.PKCHECK), input.ST.ADCHECK.ADADD, input.SP.ADCHECK.ADADD, input.PK.ADCHECK.ADADD{
+	display: inline;
+}
+input.ST.ADADD:not(.ADCHECK), input.SP.ADADD:not(.ADCHECK), input.PK.ADADD:not(.ADCHECK), input.AD.STCHECK.ADADD, input.AD.SPCHECK.ADADD, input.AD.PKCHECK.ADADD {
+	display: none;
+}	
+select.AD.ADPHONE:not(.STCHECK):not(.SPCHECK):not(.PKCHECK), select.ST.ADCHECK.ADPHONE, select.SP.ADCHECK.ADPHONE, select.PK.ADCHECK.ADPHONE{
+	display: inline;
+}
+select.ST.ADPHONE:not(.ADCHECK), select.SP.ADPHONE:not(.ADCHECK), select.PK.ADPHONE:not(.ADCHECK), select.AD.STCHECK.ADPHONE, select.AD.SPCHECK.ADPHONE, select.AD.PKCHECK.ADPHONE {
+	display: none;
+}		
+.ST.STPHONE:not(.ADCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #52a8d3;
+}
+.AD.STCHECK.STPHONE, .SP.STCHECK.STPHONE, .PK.STCHECK.STPHONE {
+	opacity: 0.5;
+	background-color: #52a8d3;
+}
+.ST.STLUNCH:not(.ADCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #aeedef;
+}	
+.AD.STCHECK.STLUNCH, .SP.STCHECK.STLUNCH, .PK.STCHECK.STLUNCH {
+	opacity: 0.5;
+	background-color: #aeedef;
+}
+.ST.STOFF:not(.ADCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #FFFFFF;
+}
+.ST.STADD:not(.ADCHECK):not(.SPCHECK):not(.PKCHECK) {
+	background-color: #ff93a5;
+}
+.AD.STCHECK.STADD, .SP.STCHECK.STADD, .PK.STCHECK.STADD {
+	opacity: 0.5;
+	background-color: #ff93a5;
+}
+input.ST.STOFF:not(.ADCHECK):not(.SPCHECK):not(.PKCHECK), input.AD.STCHECK.STOFF, input.SP.STCHECK.STOFF, input.PK.STCHECK.STOFF{
+	display: inline;
+}
+input.AD.STOFF:not(.STCHECK), input.SP.STOFF:not(.STCHECK), input.PK.STOFF:not(.STCHECK), input.ST.ADCHECK.STOFF, input.ST.SPCHECK.STOFF, input.ST.PKCHECK.STOFF {
+	display: none;
+}
+input.ST.STLUNCH:not(.ADCHECK):not(.SPCHECK):not(.PKCHECK), input.AD.STCHECK.STLUNCH, input.SP.STCHECK.STLUNCH, input.PK.STCHECK.STLUNCH {
+	display: inline;
+}
+input.AD.STLUNCH:not(.STCHECK), input.SP.STLUNCH:not(.STCHECK), input.PK.STLUNCH:not(.STCHECK), input.ST.ADCHECK.STLUNCH, input.ST.SPCHECK.STLUNCH, input.ST.PKCHECK.STLUNCH {
+	display: none;
+}
+input.ST.STADD:not(.ADCHECK):not(.SPCHECK):not(.PKCHECK), input.AD.STCHECK.STADD, input.SP.STCHECK.STADD, input.PK.STCHECK.STADD {
+	display: inline;
+}
+input.AD.STADD:not(.STCHECK), input.SP.STADD:not(.STCHECK), input.PK.STADD:not(.STCHECK), input.ST.ADCHECK.STADD, input.ST.SPCHECK.STADD, input.ST.PKCHECK.STADD {
+	display: none;
+}	
+input.ST.STPHONE:not(.ADCHECK):not(.SPCHECK):not(.PKCHECK), input.AD.STCHECK.STPHONE, input.SP.STCHECK.STPHONE, input.ST.SPCHECK.STPHONE, input.PK.STCHECK.STPHONE{
+	display: inline;
+}
+input.AD.STPHONE:not(.STCHECK), input.SP.STPHONE:not(.STCHECK), input.PK.STPHONE:not(.STCHECK), input.ST.ADCHECK.STPHONE, input.ST.SPCHECK.STPHONE, input.ST.PKCHECK.STPHONE {
+	display: none;
+}
+
+
+
+
+
+.SP.SPPHONE:not(.ADCHECK):not(.STCHECK):not(.PKCHECK) {
+	background-color: #52a8d3;
+}
+.AD.SPCHECK.SPPHONE, .ST.SPCHECK.SPPHONE, .PK.SPCHECK.SPPHONE {
+	opacity: 0.5;
+	background-color: #52a8d3;
+}
+.SP.SPPLUSPHONE:not(.ADCHECK):not(.STCHECK):not(.PKCHECK) {
+	background-color: #0074cc;
+}
+.AD.SPCHECK.SPPLUSPHONE, .ST.SPCHECK.SPPLUSPHONE, .PK.SPCHECK.SPPLUSPHONE {
+	opacity: 0.5;
+	background-color: #0074cc;
+}
+.SP.SPLUNCH:not(.ADCHECK):not(.STCHECK):not(.PKCHECK) {
+	background-color: #aeedef;
+}	
+.AD.SPCHECK.SPLUNCH, .ST.SPCHECK.SPLUNCH, .PK.SPCHECK.SPLUNCH {
+	opacity: 0.5;
+	background-color: #aeedef;
+}
+.SP.SPOFF:not(.ADCHECK):not(.STCHECK):not(.PKCHECK) {
+	background-color: #FFFFFF;
+}
+.SP.SPADD:not(.ADCHECK):not(.STCHECK):not(.PKCHECK) {
+	background-color: #ff93a5;
+}
+.AD.SPCHECK.SPADD, .ST.SPCHECK.SPADD, .PK.SPCHECK.SPADD {
+	opacity: 0.5;
+	background-color: #ff93a5;
+}
+.SP.SPPLUSADD:not(.ADCHECK):not(.STCHECK):not(.PKCHECK) {
+	background-color: #ff003b;
+}
+.AD.SPCHECK.SPPLUSADD, .ST.SPCHECK.SPPLUSADD, .PK.SPCHECK.SPPLUSADD {
+	opacity: 0.5;
+	background-color: #ff003b;
+}
+
+input.SP.SPOFF:not(.ADCHECK):not(.STCHECK):not(.PKCHECK), input.AD.SPCHECK.SPOFF, input.ST.SPCHECK.SPOFF, input.PK.SPCHECK.SPOFF{
+	display: inline;
+}
+input.AD.SPOFF:not(.SPCHECK), input.ST.SPOFF:not(.SPCHECK), input.PK.SPOFF:not(.SPCHECK), input.SP.ADCHECK.SPOFF, input.SP.STCHECK.SPOFF, input.SP.PKCHECK.SPOFF {
+	display: none;
+}
+input.SP.SPLUNCH:not(.ADCHECK):not(.STCHECK):not(.PKCHECK), input.AD.SPCHECK.SPLUNCH, input.ST.SPCHECK.SPLUNCH, input.PK.SPCHECK.SPLUNCH {
+	display: inline;
+}
+input.AD.SPLUNCH:not(.SPCHECK), input.ST.SPLUNCH:not(.SPCHECK), input.PK.SPLUNCH:not(.SPCHECK), input.SP.ADCHECK.SPLUNCH, input.SP.STCHECK.SPLUNCH, input.SP.PKCHECK.SPLUNCH {
+	display: none;
+}
+input.SP.SPADD:not(.ADCHECK):not(.STCHECK):not(.PKCHECK), input.AD.SPCHECK.SPADD, input.ST.SPCHECK.SPADD, input.PK.SPCHECK.SPADD {
+	display: inline;
+}
+input.AD.SPADD:not(.SPCHECK), input.ST.SPADD:not(.SPCHECK), input.PK.SPADD:not(.SPCHECK), input.SP.ADCHECK.SPADD, input.SP.STCHECK.SPADD, input.SP.PKCHECK.SPADD {
+	display: none;
+}
+input.SP.SPPLUSADD:not(.ADCHECK):not(.STCHECK):not(.PKCHECK), input.AD.SPCHECK.SPPLUSADD, input.ST.SPCHECK.SPPLUSADD, input.PK.SPCHECK.SPPLUSADD {
+	display: inline;
+}
+input.AD.SPPLUSADD:not(.SPCHECK), input.ST.SPPLUSADD:not(.SPCHECK), input.PK.SPPLUSADD:not(.SPCHECK), input.SP.ADCHECK.SPPLUSADD, input.SP.STCHECK.SPPLUSADD, input.SP.PKCHECK.SPPLUSADD {
+	display: none;
+}	
+input.SP.SPPHONE:not(.ADCHECK):not(.STCHECK):not(.PKCHECK), input.AD.SPCHECK.SPPHONE, input.ST.SPCHECK.SPPHONE, input.PK.SPCHECK.SPPHONE{
+	display: inline;
+}
+input.AD.SPPHONE:not(.SPCHECK), input.ST.SPPHONE:not(.SPCHECK), input.PK.SPPHONE:not(.SPCHECK), input.SP.ADCHECK.SPPHONE, input.SP.STCHECK.SPPHONE, input.SP.PKCHECK.SPPHONE {
+	display: none;
+}	
+input.SP.SPPLUSPHONE:not(.ADCHECK):not(.STCHECK):not(.PKCHECK), input.AD.SPCHECK.SPPLUSPHONE, input.ST.SPCHECK.SPPLUSPHONE, input.PK.SPCHECK.SPPLUSPHONE{
+	display: inline;
+}
+input.AD.SPPLUSPHONE:not(.SPCHECK), input.ST.SPPLUSPHONE:not(.SPCHECK), input.PK.SPPLUSPHONE:not(.SPCHECK), input.SP.ADCHECK.SPPLUSPHONE, input.SP.STCHECK.SPPLUSPHONE, input.SP.PKCHECK.SPPLUSPHONE {
+	display: none;
+}	
+
+
+.PK.PKPHONE:not(.ADCHECK):not(.STCHECK):not(.SPCHECK) {
+	background-color: #1b94d1;
+}
+.AD.PKCHECK.PKPHONE, .ST.PKCHECK.PKPHONE, .SP.PKCHECK.PKPHONE {
+	opacity: 0.5;
+	background-color: #1b94d1;
+}
+.PK.PKLUNCH:not(.ADCHECK):not(.STCHECK):not(.SPCHECK) {
+	background-color: #aeedef;
+}	
+.AD.PKCHECK.PKLUNCH, .ST.PKCHECK.PKLUNCH, .SP.PKCHECK.PKLUNCH {
+	opacity: 0.5;
+	background-color: #aeedef;
+}
+.PK.PKOFF:not(.ADCHECK):not(.STCHECK):not(.SPCHECK) {
+	background-color: #ffff46;
+}
+.AD.PKCHECK.PKOFF, .ST.PKCHECK.PKOFF, .SP.PKCHECK.PKOFF {
+	opacity: 0.5;
+	background-color: #ffff46;
+}
+input.PK.PKOFF:not(.ADCHECK):not(.STCHECK):not(.SPCHECK), input.AD.PKCHECK.PKOFF, input.ST.PKCHECK.PKOFF, input.SP.PKCHECK.PKOFF{
+	display: inline;
+}
+input.AD.PKOFF:not(.PKCHECK), input.ST.PKOFF:not(.PKCHECK), input.SP.PKOFF:not(.PKCHECK), input.PK.ADCHECK.PKOFF, input.PK.STCHECK.PKOFF, input.PK.SPCHECK.PKOFF {
+	display: none;
+}
+input.PK.PKLUNCH:not(.ADCHECK):not(.STCHECK):not(.SPCHECK), input.AD.PKCHECK.PKLUNCH, input.ST.PKCHECK.PKLUNCH, input.SP.PKCHECK.PKLUNCH {
+	display: inline;
+}
+input.AD.PKLUNCH:not(.PKCHECK), input.ST.PKLUNCH:not(.PKCHECK), input.SP.PKLUNCH:not(.PKCHECK), input.PK.ADCHECK.PKLUNCH, input.PK.STCHECK.PKLUNCH, input.PK.SPCHECK.PKLUNCH {
+	display: none;
+}
+input.PK.PKPHONE:not(.ADCHECK):not(.STCHECK):not(.SPCHECK), input.AD.PKCHECK.PKPHONE, input.ST.PKCHECK.PKPHONE, input.SP.PKCHECK.PKPHONE{
+	display: inline;
+}
+input.AD.PKPHONE:not(.PKCHECK), input.ST.PKPHONE:not(.PKCHECK), input.SP.PKPHONE:not(.PKCHECK), input.PK.ADCHECK.PKPHONE, input.PK.STCHECK.PKPHONE, input.PK.SPCHECK.PKPHONE {
+	display: none;
+}
+
+
+
+td.scheduleHeading.AD:not(.ADCLOSED):hover, td.scheduleHeading.ST:not(.STCLOSED):hover, td.scheduleHeading.SP:not(.SPCLOSED):hover, td.scheduleHeading.PK:not(.PKCLOSED):hover,
+td.scheduleHeading:not(.ADCLOSED):not(.STCLOSED):not(.SPCLOSED):not(.PKCLOSED):hover,
+
+th.scheduleHeading.AD:not(.ADCLOSED):hover, th.scheduleHeading.ST:not(.STCLOSED):hover, th.scheduleHeading.SP:not(.SPCLOSED):hover, th.scheduleHeading.PK:not(.PKCLOSED):hover,
+th.scheduleHeading:not(.ADCLOSED):not(.STCLOSED):not(.SPCLOSED):not(.PKCLOSED):hover{
+	cursor: pointer;
+	background-color: #FFFFFF;
+	color: #00284E;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 17px;
+}
+
+.switch input {
+	display:none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 13px;
+	width: 13px;
+	left: 2px;
+	bottom: 2px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #00e579;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #00e579;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(13px);
+	-ms-transform: translateX(13px);
+	transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
